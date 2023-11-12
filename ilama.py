@@ -1,9 +1,10 @@
+import os
 import openai
 
 openai.api_base = "https://api.llama-api.com"
 
 # supply your API key however you choose
-openai.api_key = "LL-Mp4n2bGMQ2j9ahvKcoj7EG9B0Wm4CuAV7awfeDEQaKRwdTonEXnSYwmNOyxV7UK2"
+openai.api_key = os.getenv('api_key')
 functions = [
     {'name': 'information_extraction',
      'description': 'Extracts the relevant information from the passage.',
